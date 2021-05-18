@@ -1,15 +1,18 @@
 pipeline {
     agent any
-
+    //Definir Variables
+    environment {
+        FICHERO = "/etc/passwd"
+    }
     stages {
-        stage('Fecha') {
+        stage('Fecha') {                    
             steps {
                 sh 'date'
             }
         }
         stage('ContarUsuarios'){
             steps{
-                sh 'wc -l /etc/passwd'
+                sh 'wc -l ${FICHERO}'
             }
         }
     }
