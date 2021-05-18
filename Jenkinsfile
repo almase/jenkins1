@@ -2,7 +2,7 @@ pipeline {
     agent any
     //Definir Variables
     environment {
-        FICHERO = "/etc/passwd"
+        FICHERO = "/etc/group"
     }
     stages {
         stage('Fecha') {                    
